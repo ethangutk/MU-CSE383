@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<!--
+        CSE 383
+        Name: Ethan Gutknecht
+        Assignment: Lab7
+        Description:use JavaScript to create page
+-->
+<html lang="en">
+        <head>
+                <meta charset="utf-8">
+                <title>CSE 383</title>
+        </head>
+ 
+        <body>
+                <script language="JavaScript">
+			function writeHTML() {
+				document.write(
+				"<h1>Lab 07</h1>" +
+				"<h2>Ethan Gutknecht</h2>" +
+				"<h3>October 4, 2021</h3>" +
+				"<button type=\"button\" onClick=\"doTime();\">Time</button><br><br>" +
+				"<button type=\"button\" onClick=\"doPicture();\">Show Pictures</button><br><br>" +
+				"<button type=\"button\" onClick=\"drawRectangle();\">Draw Rectange</button><br><br>" + 
+				"<canvas id=\"myCanvas\" width=\"400\" height=\"400\"></canvas>");
+			}
+			writeHTML()
+
+
+                        function doTime(thisElement) {
+				const d = new Date();
+				alert(d.toString());
+				// document.write(d.toString());
+					
+			}
+
+			function doPicture() {
+				for (let i = 0; i < 3; i++) {
+					var ndiv = document.createElement("div");
+					var image = document.createElement("img");
+					image.src = "https://picsum.photos/100/150?nonce=" + i;
+					ndiv.appendChild(image);
+					ndiv.id = "div_" + i;
+					ndiv.innerHTML;
+					document.body.appendChild(ndiv);
+				}
+			}
+
+			function drawRectangle() {
+				var canvas = document.getElementById("myCanvas");
+				if (canvas.getContext) {
+					var ctx = canvas.getContext("2d");
+					ctx.fillStyle = "#0000b2";
+					ctx.fillRect(50, 300, 100, 100); 
+					ctx.stroke();
+				}
+			}
+		</script>
+        </body>
+</html>
+

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Lab08 Form</title>
+</head>
+
+<body>
+<h1> Lab 08 Form (HTML5) </h1>
+<form action="" get="" target="_blank">
+  <label>Name:</label><br>
+  <input type="text" id="name" name="name" pattern="/^(([a-zA-Z]+)\ ?([a-zA-Z]+)){2,}$/"><br><br>
+
+  <label>Uid:</label><br>
+  <input type="text" id="Uid" name="Uid" pattern="[a-zA-Z0-9]+"><br><br>
+
+  <!--Numeric Only-->
+  <label>Mobile Devices:</label><br>
+  <input type="text" id="MobilDevices" name="MobilDevices" pattern="[0-9]|10"><br><br>
+  
+  <label>Quote Citation:</label><br>
+  <input type="text" id="quoteCite" name="quoteCite" pattern="([a-zA-Z0-9.,-/:]+)"><br><br>
+
+  <input type="submit" id="submit_button-f21" name="submit_button-f21" value="Press Me"><br><br><br>
+</form> 
+
+</body>
+</html>

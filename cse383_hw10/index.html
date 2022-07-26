@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	<meta charset="utf-8">
+	<title>CSE Lab 10</title>
+	<!-- Latest compiled and minified CSS -->
+
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script>
+
+		function numberFunc() {
+			// Create URL based off of form
+			var firstNum = $("#firstNumber").val();
+			var secondNum = $("#secondNumber").val();
+			var operator = $("#operatorSelect").val();
+
+			var APIURL = "https://api.clearllc.com/api/v2/math/" + operator;
+			APIURL += "?api_key=bed859b37ac6f1dd59387829a18db84c22ac99c09ee0f5fb99cb708364858818&n1=";
+			APIURL += firstNum  + "&n2=" + secondNum;
+			
+			console.log(APIURL)
+			
+			a=$.ajax({
+			url: APIURL,
+			method: "GET"
+			}).done(function(data) {
+				$("#resultText").html(data.result);
+			}).fail(function(error) {
+				$("#resultText").html("ERROR");
+			});
+
+		}
+	</script>
+</head>
+
+<body>
+	<form style="margin:100px;" id="form">
+		<div class="form-group">
+    			<label for="firstNumber">First Number</label>
+    			<input type="number" class="form-control form-control-lg" id="firstNumber" placeholder="Enter first number">
+		</div>
+		<br>
+		<div class="form-group">
+    			<label for="secondNumber">Second Number</label>
+    			<input type="number" class="form-control form-control-lg" id="secondNumber" placeholder="Enter second number">
+		</div>
+		<br>
+
+		<div class="form-group">
+			<label for="operatorSelect">Example select</label>
+			<select class="form-control form-control-lg" id="operatorSelect">
+				<option value="Add">+</option>
+				<option value="Subtract">-</option>
+				<option value="Multiply">*</option>
+				<option value="Divide">/</option>
+			</select>
+		</div>
+		<br>
+		<button type="button" onclick="numberFunc()" class="btn btn-lg btn-primary">Submit</button>
+		<br><br><br>
+		<h1>Result: </h1>
+		<h3 id="resultText"></h3>
+	</form>	
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>
+
+

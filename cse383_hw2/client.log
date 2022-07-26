@@ -1,0 +1,29 @@
+Sep 05, 2021 5:46:12 PM socketClient <init>
+INFO: ClientMAIN - Port = 5002 hostname = 184.58.68.186
+Sep 05, 2021 5:46:12 PM socketClient process
+INFO: Connecting
+Sep 05, 2021 5:46:12 PM socketClient connect
+INFO: Connect => hostname = 184.58.68.186 port = 5002
+Sep 05, 2021 5:46:12 PM socketClient process
+SEVERE: error during connection
+java.net.SocketException: Connection reset
+	at java.base/java.net.SocketInputStream.read(SocketInputStream.java:186)
+	at java.base/java.net.SocketInputStream.read(SocketInputStream.java:140)
+	at java.base/sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:284)
+	at java.base/sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:326)
+	at java.base/sun.nio.cs.StreamDecoder.read(StreamDecoder.java:178)
+	at java.base/java.io.InputStreamReader.read(InputStreamReader.java:181)
+	at java.base/java.io.BufferedReader.fill(BufferedReader.java:161)
+	at java.base/java.io.BufferedReader.readLine(BufferedReader.java:326)
+	at java.base/java.io.BufferedReader.readLine(BufferedReader.java:392)
+	at socketClient.readResponse(hw2.java:192)
+	at socketClient.process(hw2.java:111)
+	at socketClient.main(hw2.java:71)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at jdk.compiler/com.sun.tools.javac.launcher.Main.execute(Main.java:404)
+	at jdk.compiler/com.sun.tools.javac.launcher.Main.run(Main.java:179)
+	at jdk.compiler/com.sun.tools.javac.launcher.Main.main(Main.java:119)
+

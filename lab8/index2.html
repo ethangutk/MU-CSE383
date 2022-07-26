@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Lab08 Form</title>
+<script>
+	// "/^(([a-zA-Z]+)\ ?([a-zA-Z]+)){2,}$/"
+	// Verify that the text field has a valid name (firstname lastname)
+	// two names (a-zA-Z) with a single space in between
+	// if invalid, display a message after the text field is entered, or when the form is submitted.
+	// Name feild should be two words
+	
+	function checkNameFeild() {
+	    var nameValue = document.getElementById("name_input").value;
+	    if (nameValue.match(/^(([a-zA-Z]+)\ ([a-zA-Z]+))$/) ) {
+		document.getElementById("f1").submit();
+	    } else {
+		alert("The form feilds are not correct!");
+		return;
+	    }
+	}
+
+</script>
+</head>
+
+
+
+<body>
+<h1> Lab 08 Form (JavaScript) </h1>
+<form name="f1" id="f1" action="" get="" target="_blank">
+
+  <label>Name:</label><br>
+  <input type="text" id="name_input" name="name_input"><br><br>
+  
+  <button onclick="checkNameFeild()">Click me</button><br><br><br>
+</form> 
+
+</body>
+</html>

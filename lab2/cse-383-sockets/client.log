@@ -1,0 +1,6 @@
+Sep 05, 2021 7:00:01 PM hw2 <init>
+INFO: ClientMAIN - Port = 5002 hostname = 184.58.68.186
+Sep 05, 2021 7:00:01 PM hw2 process
+INFO: Connecting
+Sep 05, 2021 7:00:01 PM hw2 connect
+INFO: Connect => hostname = 184.58.68.186 port = 5002

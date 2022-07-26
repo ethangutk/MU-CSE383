@@ -1,0 +1,26 @@
+
+/* Ethan Gutknecht */
+/* CSE383A */
+/* Homework05 */
+
+label {
+	 font-weight: bold;
+}
+
+
+div {
+	background-color: #EBEBEB;
+	outline: 1px solid gray;
+	vertical-align: baseline;
+	text-align: center;
+}
+
+.col {
+	vertical-align: baseline;
+}
+
+h2 {
+	text-align: center;
+	color: #003399;
+	font-weight: bold;
+}

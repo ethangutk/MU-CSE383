@@ -1,0 +1,56 @@
+
+/* Ethan Gutknecht */
+/* CSE383A */
+/* Homework04 */
+
+.div1 {
+	margin: auto;
+	border: 15px dotted red;
+  	width: 50%;
+	text-align: center;
+}
+
+.div2 {
+	margin: 15px;
+	border: 15px double yellow;
+	float: left;
+  	width: 25%;
+  	padding: 30px;
+
+}
+
+.div3 {
+	margin: 15px;
+	border: 15px groove green;
+	float: left;
+  	width: 25%;
+  	padding: 30px;
+
+}
+
+.div4 {
+	margin: 15px;
+	border: 15px outset blue;
+	float: left;
+  	width: 25%;
+  	padding: 30px;
+
+}
+
+.row1 {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+h2 {
+	text-align: center;
+	text-transform: uppercase;
+	text-shadow: 1px 1px;
+	color: #990000;
+}
+
+p {
+}
+
+

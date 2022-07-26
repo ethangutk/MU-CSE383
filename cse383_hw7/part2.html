@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!--
+        CSE 383
+        Name: Ethan Gutknecht
+        Assignment: Lab7
+        Description:use JavaScript to create 20 random triangles
+-->
+<html lang="en">
+        <head>
+                <meta charset="utf-8">
+                <title>CSE 383 Homework 7 PT2</title>
+        </head>
+ 
+        <body>
+                <script language="JavaScript">
+			const width  = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+			const height = window.innerHeight|| document.documentElement.clientHeight|| document.body.clientHeight;
+
+			function writeHTML() {
+				document.write(
+				"<canvas id=\"myCanvas\" width=\"" + width + "\" height=\"" + height + "\"></canvas>");
+			}
+			writeHTML()
+
+			function drawTriangle(xpos, ypos, scale) {
+				var canvas = document.getElementById("myCanvas");
+				if (canvas.getContext) {
+					var ctx = canvas.getContext("2d");
+					ctx.beginPath();
+					ctx.moveTo(xpos, ypos); // Move to inital point
+					ctx.lineTo(xpos, ypos + scale); // Move down
+					ctx.lineTo(xpos + scale, ypos + scale); // Move left
+					ctx.closePath();
+					ctx.fillStyle = "#" + Math.floor(Math.random() * 999999);
+					ctx.fill();			
+				}
+			}
+			
+			// Draw Triangles
+
+			for (let i = 0; i < 20; i++) {
+				var xpos = Math.floor(Math.random() * width - 200) + 100; // Random point on the x axis
+				var ypos = Math.floor(Math.random() * height - 200) + 100; // Random point of the y axis
+				var scale = Math.floor(Math.random() * 200) + 75; // Random number between 25 and 100
+				drawTriangle(xpos, ypos, scale);
+			}
+
+		</script>
+        </body>
+</html>
+
